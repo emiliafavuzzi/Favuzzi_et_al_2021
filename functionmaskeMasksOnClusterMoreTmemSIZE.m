@@ -31,44 +31,16 @@ thisImage=bwareaopen(thisImage,750);
 % figure, imshow(thisImage);
 cellmaskTmem119=im2bw(thisImage);
 mycompt=0;%%
-% disp('here')
-stats=regionprops(cellmaskTmem119,'area','PixelIdxList');
-  thisImage=zeros(size(cellmaskTmem119));
-  removed=zeros(size(cellmaskTmem119));
-    for i=1:size(stats,1)
-%     for i=1:150
-    thiscell=zeros(size(cellmaskTmem119));
-    thiscell(stats(i).PixelIdxList)=1;
-    thisarea=stats(i).Area;
 
-%     while thisarea<1700
-%         thiscell=imdilate(thiscell,strel('disk',4));
-%         thisarea=sum(sum(im2bw(thiscell)));
-%     end
-    while thisarea>3000
-        thiscell=imerode(thiscell,strel('disk',4));
-        newstats=regionprops(im2bw(bwareaopen(thiscell,400)),'area');
-        thisarea=newstats(1).Area;
-        %disp(thisarea)
-    end 
-    thisnucleus=bsxfun(@times, mask_DAPI, cast(thiscell, 'like', mask_DAPI));
-    mynucleus=sum(sum(thisnucleus))
-    %disp('cell done')
-    if mynucleus>2200000
-    thisImage=thisImage+thiscell;
-    else
-        removed=removed+thiscell;
-    end
-    end
     
     
-    removed=200*double((imdilate(removed,strel('disk',9))-removed));
-    removed=reduceImage(removed);
-    nuclei=reduceImage(nuclei);
-    savethisrgb=cat(3,removed,removed,nuclei);
-  cellmaskTmem119=thisImage;
+%    removed=200*double((imdilate(removed,strel('disk',9))-removed));
+%    removed=reduceImage(removed);
+%    nuclei=reduceImage(nuclei);
+%    savethisrgb=cat(3,removed,removed,nuclei);
+ % cellmaskTmem119=thisImage;
 %%
-imwrite(savethisrgb,fullfile(savepath,'analysis','removedonDAPI.png'))
+%imwrite(savethisrgb,fullfile(savepath,'analysis','removedonDAPI.png'))
 %figure, imshow(thisImage);
 %imshowpair(cellmaskTmem119,cellmaskFcrls);
 
