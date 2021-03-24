@@ -1,5 +1,5 @@
 # MERFISH
-this repository contains that was used in GABA receptive micrglia selectively sculpt developing inhibitory circuits, Emilia Favuzzy et al.
+this repository contains scripts that were used in GABA receptive micrglia selectively sculpt developing inhibitory circuits, Emilia Favuzzy et al.
 
 First run groupdsmFISH.m to sum smfish images
 then run Main_analysis.m to generate count and intensity matrix for repectvely MERFISH encoded genes and smFISH.
