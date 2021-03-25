@@ -1,7 +1,0 @@
-{
-    "cluster": "qsub -l h_vmem={cluster.mem} -l h_rt={cluster.time} -j y -o {cluster.out}",
-    "cluster_config": "/broad/clearylab/Users/zheng/microglia_control/params/snakemake/clusterconfig.json",
-    "nodes": 1000,
-    "latency_wait": 120,
-    "restart_times": 2
-}
