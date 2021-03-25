@@ -5,7 +5,7 @@ dapipath=fullfile(savepath,'/smFISH_mosaics');
 mask_Tmem119=imread(fullfile(mypath,'mask_Tmem119.tif'));
 mask_DAPI=imread(fullfile(dapipath,'mosaic_DAPI_3.tif'));
 nuclei=bwareaopen(imbinarize(mask_DAPI,'adaptive','Sensitivity',0.001),200);
-load(fullfile(savepath,'matlab.mat'));
+load(fullfile(savepath,'matlab.mat'));%this mat file contains a manually drawn mask to only select the SSC region
 %mask_Fcrls=imread(fullfile(mypath,'mask_Fcrls.tif'));
 % mask_Gabbr1=imread(fullfile(mypath,'mask_Gabbr1.tif'));
 % mask_Gabbr2=imread(fullfile(mypath,'mask_Gabbr2.tif'));
@@ -26,7 +26,7 @@ thisImage=bwareaopen(imdilate(mask_Tmem119,SE),750);
 SE=strel('disk',3);
 thisImage=imdilate(thisImage,SE);
 thisImage=bwareaopen(thisImage,800);
-thisImage=thisImage.*mask;
+thisImage=thisImage.*mask;%mask is a variable in the matlab.mat file that is loaded above
 thisImage=bwareaopen(thisImage,750);
 % figure, imshow(thisImage);
 cellmaskTmem119=im2bw(thisImage);
