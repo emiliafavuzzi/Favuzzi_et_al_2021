@@ -1,3 +1,6 @@
+% Loic Binan
+%lbinan@broadinstitute.org
+%3/26/2021
 % dbstop in fastCounts
 % clear
 % disp('running control1_brain2');
