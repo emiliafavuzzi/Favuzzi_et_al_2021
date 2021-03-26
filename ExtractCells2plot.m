@@ -1,3 +1,7 @@
+% Loic Binan
+%lbinan@broadinstitute.org
+%3/26/2021
+
 function [myList]=ExtractCells2plot(myclustergreen,myslice)
 load('listsOfcells.mat')
 MyTable(:,1)=table2array(ctrkoinfoseparateCTRKO(:,1));
