@@ -1,4 +1,7 @@
 function [mythreshold]=countsmFISHHIGH(thatpath)
+% Loic Binan
+%lbinan@broadinstitute.org
+%3/26/2021
 %this functions edits the counts generate by the main script to replace intensity values with counts for C1qc, Tms4bx,Rsp29,Ftl1
 % thatpath='KO2_brain2/slice2_side1';
 savepath=fullfile('/broad/hptmp/lbinan/microglia/',thatpath);
