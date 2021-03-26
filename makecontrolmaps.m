@@ -1,3 +1,6 @@
+% Loic Binan
+%lbinan@broadinstitute.org
+%3/26/2021
 myclustergreen=5; %sets the ID of the cluster that will be plotted on the maps
 disp('control1_brain2/slice1_side1')
 myList=ExtractCells2plot(myclustergreen,1)
