@@ -1,4 +1,7 @@
 function fastintensityCompiled(thatpath,cellmaskTmem119)
+% Loic Binan
+%lbinan@broadinstitute.org
+%3/26/2021
 SE=strel('disk',8);
 savepath=fullfile('/broad/hptmp/lbinan/microglia/',thatpath);
 mypath=fullfile(savepath,'/smFISH_mosaics');
