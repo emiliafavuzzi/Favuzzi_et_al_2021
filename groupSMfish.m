@@ -1,5 +1,7 @@
 function [thisImage]=groupSMfish(inputpath, outputpath)
-
+% Loic Binan
+%lbinan@broadinstitute.org
+%3/26/2021
 for i=13:22
 mypath=fullfile(strcat(inputpath,'/mosaic_bit',num2str(i),'_0','.tif'));
 savepath=fullfile(strcat(outputpath,'/smFISH_mosaics/mosaic_bit',num2str(i),'_compiled','.tif'));
