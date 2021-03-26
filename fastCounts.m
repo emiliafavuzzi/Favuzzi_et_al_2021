@@ -1,5 +1,7 @@
 function fastCounts(thatpath,cellmaskTmem119)
-
+% Loic Binan
+%lbinan@broadinstitute.org
+%3/26/2021
 savepath=fullfile('/broad/hptmp/lbinan/microglia/',thatpath);
 mypath=fullfile(savepath,'/merfish_mosaics');
 SE=strel('disk',6);
