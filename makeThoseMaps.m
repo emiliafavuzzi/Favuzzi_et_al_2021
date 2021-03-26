@@ -1,5 +1,7 @@
  function [mythreshold]=makeThoseMaps(thatpath,myList,myclustergreen)
-
+% Loic Binan
+%lbinan@broadinstitute.org
+%3/26/2021
 % thatpath='control1_brain2/slice1_side1';
 savepath=fullfile('/broad/hptmp/lbinan/microglia/',thatpath);
 mypath=fullfile(savepath,'/merfish_mosaics');
