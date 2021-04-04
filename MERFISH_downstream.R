@@ -8,7 +8,7 @@ library(ggplot2)
 library(umap)
 library(viridis)
 library(Seurat)
-#this R (R version 4.0.0 (2020-04-24)) script starts with the output of the matlab script, for each brain there is a folder with subfolders in it organized by sliceXsideX (the original folders have been moved to a different directory but the organization is preserved)
+#this R script starts with the output of the matlab script, for each brain there is a folder with subfolders in it organized by sliceXsideX (the original folders have been moved to a different directory but the organization is preserved)
 #MERFISH count files are named as sliceX_sideXfastCountsFixedZCounts.csv
 #smFISH count files are named as slice1_side2counted4genesNUCLEITHRESHHIGH.csv
 setwd("/Volumes/GoogleDrive/My Drive/MERFISH_analysis")
